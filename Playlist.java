@@ -34,15 +34,15 @@ public class Playlist {
     }
     public void like(String title) {
         for (Song song : songs) {
-            if (song.getTitle().equals(title)) {
+            if (song.getName().equals(title)) {
                 song.like();
                 return;
             }
         }
     }
-    public void remove(String title) {
+    public void remove(String name) {
         for (int i = 0; i < songs.size(); i++) {
-            if (songs.get(i).getTitle().equals(title)) {
+            if (songs.get(i).getName().equals(name)) {
                 songs.remove(i);
                 break;
             }
@@ -72,8 +72,8 @@ public class Playlist {
         int sec = 0;
 
         for (Song song : songs) {
-            String duration = song.getDuration();
-            String[] minsec = duration.split(":");
+            String length = song.getLength();
+            String[] minsec = length.split(":");
             min += Integer.parseInt(minsec[0]);
             sec += Integer.parseInt(minsec[1]);
         }
