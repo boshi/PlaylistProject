@@ -1,30 +1,41 @@
-/**
- * File for a Song class to be used in the Playlist Project
- * @author
- * @version
- */
 public class Song {
-    //Fields-- what information do we want each Song to store?
+   private String title;
+   private String artist;
+   private String duration;
+   private boolean liked;
 
+   public Song(String var1, String var2, String var3) {
+      this.title = var1;
+      this.artist = var2;
+      this.duration = var3;
+      this.liked = false;
+   }
 
+   public String getTitle() {
+      return this.title;
+   }
 
+   public String getArtist() {
+      return this.artist;
+   }
 
-    /**
-     * Constructor-- what information needs to be given to make a Song?
-     * How will you handle 'liked' songs? It makes sense for a Song not be 'liked' by default
-     */
+   public String getDuration() {
+      return this.duration;
+   }
 
+   public boolean isLiked() {
+      return this.liked;
+   }
 
+   public void like() {
+      this.liked = true;
+   }
 
+   public void unlike() {
+      this.liked = false;
+   }
 
-
-     /**
-      * Methods-- what will you want each Song to do?
-      * Consider all the getter methods (getName, getArtist, etc.)
-      * You should probably have a toString method to be able to get the information for the full
-      * song easily as well!
-      * What kind of mutator (setter) methods will you need?
-      */
-
-
+   public String toString() {
+      return this.liked ? "\"" + this.title + "\" by " + this.artist + " (" + this.duration + ") -- liked" : "\"" + this.title + "\" by " + this.artist + " (" + this.duration + ")";
+   }
 }
