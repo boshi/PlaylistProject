@@ -10,6 +10,8 @@ public class PlaylistTester {
     public static void main(String[] args) {
         System.out.println("Initializing a Playlist...\n");
         //Make your playlist here
+        Playlist myPlaylist = new Playlist();
+
 
         System.out.println("Adding songs to the Playlist...\n");
         /**
@@ -44,11 +46,11 @@ public class PlaylistTester {
 
         System.out.println("\nPrinting the total duration of all songs...\n");
         //Note that the format should look something like minutes:seconds
-        myPlaylist.totalDuration();
+        myPlaylist.getDur();
 
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call
-        myPlaylist.removeUnliked();
+        myPlaylist.remUnliked();
 
         System.out.println("Printing all songs...\n");
         //This should now look like only the liked songs list from before
