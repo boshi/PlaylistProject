@@ -51,7 +51,11 @@ public class PlaylistTester {
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call
         myPlaylist.remUnliked();
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> de5b89e094cac32f8f83a4d13cce3292830b4045
         System.out.println("Printing all songs...\n");
         //This should now look like only the liked songs list from before
         myPlaylist.dispAll();
