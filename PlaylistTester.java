@@ -20,20 +20,32 @@ public class PlaylistTester {
          * p.addSong(new Song(..., ..., ...))
          */
 
+        myPlaylist.add(new Song("Yellow", "Coldplay", "4:26"));
+        myPlaylist.add(new Song("Boba", "Boshi", "3:12"));
+        myPlaylist.add(new Song("Rock With You", "Michael Jackson", "3:41"));
+        myPlaylist.add(new Song("Tiny Dancer", "Elton John", "6:47"));
+        myPlaylist.add(new Song("Ho Hey", "The Lumineers", "2:42"));
+        
+
 
 
         System.out.println("Printing the songs...\n");
         //Print out all the songs in the playlist to verify it's working correctly
-
+        myPlaylist.dispAll();
 
         System.out.println("\nLiking the songs in position X, Y, Z, etc....\n");
         //Once your songs are 'liked', this should be reflected in the next printout
-
+        myPlaylist.like("Yellow");
+        myPlaylist.like("Rock With You");
+        myPlaylist.like("Ho Hey");
 
         System.out.println("Printing the songs...\n");
-
+        myPlaylist.dispAll();
 
         System.out.println("\nRemoving the song in position A, B, C, etc...\n");
+
+        myPlaylist.remove("Boba");
+        myPlaylist.remove("Tiny Dancer");
 
 
         System.out.println("Printing the songs...\n");
@@ -51,11 +63,7 @@ public class PlaylistTester {
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call
         myPlaylist.remUnliked();
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> de5b89e094cac32f8f83a4d13cce3292830b4045
         System.out.println("Printing all songs...\n");
         //This should now look like only the liked songs list from before
         myPlaylist.dispAll();
